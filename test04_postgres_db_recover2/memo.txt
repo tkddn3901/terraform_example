@@ -1,0 +1,8 @@
+#s3 bucket's name
+db-backup-storage-71dfacd9
+
+#full_db_backup.sql 파일을 s3 버킷에 업로드하기
+aws s3 cp ./full_db_backup.sql   s3://db-backup-storage-71dfacd9/full_db_backup.sql
+
+#목록 확인
+aws s3 ls s3://db-backup-storage-71dfacd9/
